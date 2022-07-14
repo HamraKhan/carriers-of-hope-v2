@@ -6,7 +6,7 @@ function ConfirmForgottenNameOrPassword() {
   return (
     <>
       <button onClick={() => navigate(-1)}>back</button>
-      <h2>Login to you email to reset your login details</h2>
+      <h2>Check your email to reset your login details</h2>
     </>
   );
 }
