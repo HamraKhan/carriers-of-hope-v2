@@ -23,8 +23,10 @@ export const StyledNav = styled.nav`
   color: black;
   z-index: 1;
   cursor: pointer;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 
   /* // navbar.css */
 
@@ -124,14 +126,6 @@ export const StyledNav = styled.nav`
     text-transform: uppercase;
     padding: 30px;
   }
-
-  /*
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-/* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
 `;
 
 export const Heading = styled.h1`
