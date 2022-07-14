@@ -13,6 +13,8 @@ import FilteredProducts from "./components/FilteredProducts";
 import UserLogin from "./components/UserLogin";
 import ForgottenNameOrPassword from "./components/ForgottenNameOrPassword";
 import SignUp from "./components/SignUp";
+import ConfirmUserAccountCreated from "./components/ConfirmUserAccountCreated";
+import ConfirmForgottenNameOrPassword from "./components/ConfirmForgottenNameOrPassword";
 
 function App() {
   return (
@@ -35,7 +37,14 @@ function App() {
               element={<ForgottenNameOrPassword />}
             ></Route>
             <Route path="sign-up" element={<SignUp />}></Route>
-            <Route></Route>
+            <Route
+              path="confirm-user-account-created"
+              element={<ConfirmUserAccountCreated />}
+            ></Route>
+            <Route
+              path="confirm-forgotten-username-or-password"
+              element={<ConfirmForgottenNameOrPassword />}
+            ></Route>
             <Route path="request-form" element={<RequestForm />}></Route>
             <Route path="order-summary" element={<OrderSummary />}></Route>
             <Route path="*" element={<NoMatch />}></Route>

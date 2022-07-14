@@ -8,9 +8,19 @@ function ForgottenNameOrPassword() {
     <>
       <button onClick={() => navigate(-1)}>back</button>
       <Form>
+        <h1>Forgotten username or password</h1>
         <label>Email:</label>
         <input type="email" />
-        <button>submit</button>
+
+        <button
+          onClick={() =>
+            navigate("/confirm-forgotten-username-or-password", {
+              replace: true,
+            })
+          }
+        >
+          submit
+        </button>
       </Form>
     </>
   );

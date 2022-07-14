@@ -1,9 +1,10 @@
 import React from "react";
+import { Form } from "./styles/Container.styled";
 
 function GuestLogin() {
   return (
     <>
-      <form>
+      <Form>
         <label>First Name</label>
         <input type="text" />
         <label>Last Name</label>
@@ -16,7 +17,7 @@ function GuestLogin() {
         <input type="email" />
         <label>telephone</label>
         <button>submit</button>
-      </form>
+      </Form>
     </>
   );
 }

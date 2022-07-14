@@ -7,7 +7,9 @@ function SignUp() {
   return (
     <>
       <button onClick={() => navigate(-1)}>back</button>
+
       <Form>
+        <h1>Sign Up</h1>
         <label>First Name</label>
         <input type="text" />
         <label>Last Name</label>
@@ -24,7 +26,14 @@ function SignUp() {
         <input type="password" />
         <label>Retype Password:</label>
         <input type="password" />
-        <button>submit</button>
+
+        <button
+          onClick={() =>
+            navigate("/confirm-user-account-created", { replace: true })
+          }
+        >
+          submit
+        </button>
       </Form>
     </>
   );

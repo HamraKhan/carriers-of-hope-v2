@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { StyledNav } from "./styles/Container.styled";
 import { NavLink } from "react-router-dom";
-import "./navbar.css";
 
 function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
