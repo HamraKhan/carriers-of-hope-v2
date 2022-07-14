@@ -15,6 +15,7 @@ import ForgottenNameOrPassword from "./components/ForgottenNameOrPassword";
 import SignUp from "./components/SignUp";
 import ConfirmUserAccountCreated from "./components/ConfirmUserAccountCreated";
 import ConfirmForgottenNameOrPassword from "./components/ConfirmForgottenNameOrPassword";
+import GuestLogin from "./components/GuestLogin";
 
 function App() {
   return (
@@ -30,13 +31,13 @@ function App() {
               element={<ProductDetails />}
             ></Route>
             <Route path="filtered-products" element={<FilteredProducts />} />
-            {/* <Route path="product-details" element={<ProductDetails />}></Route> */}
             <Route path="user-login" element={<UserLogin />}></Route>
             <Route
               path="forgotten-name-or-password"
               element={<ForgottenNameOrPassword />}
             ></Route>
             <Route path="sign-up" element={<SignUp />}></Route>
+            <Route path="guest-login" element={<GuestLogin />}></Route>
             <Route
               path="confirm-user-account-created"
               element={<ConfirmUserAccountCreated />}
