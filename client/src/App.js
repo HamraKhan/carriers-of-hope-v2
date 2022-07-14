@@ -26,11 +26,11 @@ function App() {
             <Route path="/" element={<Homepage />}></Route>
             <Route path="all-products" element={<AllProducts />}></Route>
             <Route
-              path="product-details/:itemId"
+              path="all-products/:productId"
               element={<ProductDetails />}
             ></Route>
             <Route path="filtered-products" element={<FilteredProducts />} />
-            <Route path="product-details" element={<ProductDetails />}></Route>
+            {/* <Route path="product-details" element={<ProductDetails />}></Route> */}
             <Route path="user-login" element={<UserLogin />}></Route>
             <Route
               path="forgotten-name-or-password"

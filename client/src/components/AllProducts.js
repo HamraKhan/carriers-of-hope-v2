@@ -15,10 +15,22 @@ function AllProducts() {
             <p>Filter</p>
           </div>
         </Link> */}
-        <Link to="/product-details">
+        <Link to="/all-products/:productId">
           {" "}
           <div>
             <p>Item 1</p>
+          </div>
+        </Link>
+        <Link to="/all-products/:productId">
+          {" "}
+          <div>
+            <p>Item 2</p>
+          </div>
+        </Link>
+        <Link to="/all-products/:productId">
+          {" "}
+          <div>
+            <p>Item 3</p>
           </div>
         </Link>
       </div>
