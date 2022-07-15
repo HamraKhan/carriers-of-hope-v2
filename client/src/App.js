@@ -1,6 +1,7 @@
 import "./App.css";
 import { Container } from "./components/styles/Container.styled";
 import { Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./components/auth";
 import Homepage from "./components/Homepage";
 import AllProducts from "./components/AllProducts";
 import ProductDetails from "./components/ProductDetails";
@@ -16,10 +17,12 @@ import SignUp from "./components/SignUp";
 import ConfirmUserAccountCreated from "./components/ConfirmUserAccountCreated";
 import ConfirmForgottenNameOrPassword from "./components/ConfirmForgottenNameOrPassword";
 import GuestLogin from "./components/GuestLogin";
+import Profile from "./components/Profile";
+import RequireAuth from "./components/RequireAuth";
 
 function App() {
   return (
-    <>
+    <AuthProvider>
       <Container>
         <Navbar />
         <div className="content-wrap">
@@ -32,6 +35,14 @@ function App() {
             ></Route>
             <Route path="filtered-products" element={<FilteredProducts />} />
             <Route path="user-login" element={<UserLogin />}></Route>
+            <Route
+              path="profile"
+              element={
+                <RequireAuth>
+                  <Profile />
+                </RequireAuth>
+              }
+            ></Route>
             <Route
               path="forgotten-name-or-password"
               element={<ForgottenNameOrPassword />}
@@ -54,7 +65,7 @@ function App() {
 
         <Footer />
       </Container>
-    </>
+    </AuthProvider>
   );
 }
 
