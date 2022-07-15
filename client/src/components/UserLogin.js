@@ -1,10 +1,22 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Form } from "./styles/Container.styled";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useAuth } from "./auth";
 
 function UserLogin() {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const redirectPath = location.state?.path || "/";
+  const [user, setUser] = useState("");
+  const auth = useAuth();
+  const handleLogin = () => {
+    auth.login(user);
+    navigate(redirectPath, { replace: true });
+  };
   return (
     <>
       {" "}
@@ -12,11 +24,16 @@ function UserLogin() {
       <Form>
         <h1>User Login</h1>
 
-        <label>Username or Email:</label>
-        <input type="text" />
-        <label>Password:</label>
-        <input type="password" />
-        <button>Login</button>
+        <>
+          <label>
+            Username or email:{" "}
+            <input type="text" onChange={(e) => setUser(e.target.value)} />
+          </label>
+          <label>
+            Password: <input type="password" />
+          </label>
+          <button onClick={handleLogin}>Login</button>
+        </>
       </Form>
       <nav>
         <p>
@@ -28,6 +45,12 @@ function UserLogin() {
         <p>
           Don't have an account? Sign up{" "}
           <Link to="/sign-up">
+            <span style={{ color: "blue" }}>here</span>
+          </Link>
+        </p>
+        <p>
+          or login as a Guest{" "}
+          <Link to="/guest-login">
             <span style={{ color: "blue" }}>here</span>
           </Link>
         </p>
