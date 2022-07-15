@@ -2,9 +2,12 @@ import React from "react";
 import { useState } from "react";
 import { StyledNav } from "./styles/Container.styled";
 import { NavLink } from "react-router-dom";
+import { useAuth } from "./auth";
 
 function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
+
+  const auth = useAuth();
   return (
     <>
       <StyledNav>
@@ -19,12 +22,15 @@ function Navbar() {
               <li>
                 <NavLink to="/">Home</NavLink>
               </li>
-              <li>
-                <NavLink to="/user-login">Login</NavLink>
-              </li>
+
               <li>
                 <NavLink to="/all-products">Products</NavLink>
               </li>
+              {!auth.user && (
+                <li>
+                  <NavLink to="/user-login">Login</NavLink>
+                </li>
+              )}
             </ul>
           </nav>
         </div>
