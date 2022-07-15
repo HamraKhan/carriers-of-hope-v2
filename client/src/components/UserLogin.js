@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 import { Form } from "./styles/Container.styled";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -8,14 +7,11 @@ import { useAuth } from "./auth";
 
 function UserLogin() {
   const navigate = useNavigate();
-  const location = useLocation();
-
-  const redirectPath = location.state?.path || "/";
   const [user, setUser] = useState("");
   const auth = useAuth();
   const handleLogin = () => {
     auth.login(user);
-    navigate(redirectPath, { replace: true });
+    navigate("/profile", { replace: true });
   };
   return (
     <>
