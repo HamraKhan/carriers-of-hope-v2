@@ -23,12 +23,7 @@ export const StyledNav = styled.nav`
   color: black;
   z-index: 1;
   cursor: pointer;
-  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-
-  /* // navbar.css */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
   .navigation-menu {
     margin-left: auto;
@@ -89,7 +84,6 @@ export const StyledNav = styled.nav`
 
   @media screen and (max-width: 768px) {
     .navigation-menu ul {
-      /* // navigation menu is positioned to start 60px from the top of the document (which is directly below the navbar) */
       position: absolute;
       top: 60px;
       left: 0;
