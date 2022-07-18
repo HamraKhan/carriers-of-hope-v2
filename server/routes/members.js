@@ -4,14 +4,15 @@ let {
   getMemberById,
   createMembers,
   updateMemberById,
-  deleteMemberById
+  deleteMemberById,
 } = require("../service/members");
 
 //Send a GET request to /members to READ(view) a list of members
 router.get("/", (req, res) => {
-  getMembers().then((member) => {
+  getMembers(req, res).then((member) => {
     res.status(200).json(member);
   });
+  // res.send();
 });
 
 //Send a GET request to /members/:id to READ(view) a member
@@ -51,9 +52,7 @@ router.put("/:id", (req, res) => {
 router.delete("/:id", (req, res) => {
   const memberId = Number(req.params.id);
   deleteMemberById(memberId, res).then((member) => {
-    res
-      .status(200)
-      .send({ message: "Member deleted successfully!", memberId });
+    res.status(200).send({ message: "Member deleted successfully!", memberId });
   });
 });
 
