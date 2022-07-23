@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/signup.scss";
+// import "../styles/signup.scss";
 import { signUp } from "../services/authService";
 
 const SignUpPage = () => {
@@ -99,7 +99,7 @@ const SignUpPage = () => {
 
   const navigate = useNavigate();
   return (
-    <>
+    <div className='sign-up-page'>
       <button onClick={() => navigate(-1)}>back</button>
       {/* Calling to the methods */}
       <div className="messages">
@@ -188,7 +188,7 @@ const SignUpPage = () => {
         />
         <button>submit</button>
       </form>
-    </>
+    </div>
   );
 };
 
